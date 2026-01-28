@@ -86,13 +86,65 @@ body {
   --muted: #6b7280;        /* muted text */
   --bg: #f6f7fb;           /* page background */
   --card: #ffffff;         /* card/background surfaces */
+  --brand: #2563eb;        /*TD1 */
+  --brand-dark: #1d4ed8;   /* TD1 */
+}
+* {
+  box-sizing: border-box; /* TD1 */
 }
 
 .site-header,
 .site-footer {
   text-align: center;
   padding: 1.25rem;
+  background-color: var(--card);  /* TD2 */
 }
+.tagline {
+  color: var(--muted); /* TD2 */
+}
+
+.color-demo .color-note {
+  color: var(--brand); /* TD3 */
+  font-weight: bold; /* TD3 */
+}
+.color-demo .muted {
+  color: var(--muted); /* TD3 */
+  font-size: 0.95rem; /* TD3 */
+}
+
+.bg-sample{
+  width: 100%; /* TD3 */
+  min-height: 80px; /* TD3 */
+  padding: 0.75rem; /* TD3 */
+  margin-block: 0.75rem; /* TD3 */
+  border-radius: 0.75rem; /* TD3 */
+  color: white; /* TD3 */
+  background: linear-gradient(135deg, var(--brand), #22c55e); /* TD3 */
+}
+
+
+.inline-label{
+  display: inline-block; /* TD4 */
+  padding: 0.25rem 0.5rem; /* TD4 */
+  border: 1px solid rgba(0, 0, 0, 0.18); /* TD4 */
+
+}
+.inline-label.alt{
+    border-style: dashed; /* TD4 */
+}
+
+.copy .title{
+  font-size: 1.25rem; /* TD5 */
+  font-weight: 600;/* TD5 */
+  text-transform: capitalize;/* TD5 */
+}
+
+.copy .intro {
+  font-style: italic;/* TD5 */
+  line-height: 1.6;/* TD5 */
+  margin-top: 0.25rem;/* TD5 */
+}
+
 
 .container {
   max-width: 900px;
@@ -113,17 +165,59 @@ body {
   gap: 1rem;
 }
 
+
 .toolbar {
+  display: flex; /* TD6*/
+  justify-content: space-between; /* TD6*/
+  align-items: center;/* TD6*/
+  gap: 0.75rem;/* TD6*/
   padding: 0.5rem;
   border: 1px dashed rgba(0, 0, 0, 0.1);
 }
 
+.btn {
+  padding: 0.5rem 0.9rem; /* TD6*/
+  border: none; /* TD6*/
+}
+
+.btn:hover {
+  background-color: var(--brand-dark); /* TD6*/
+}
+
+.product-grid{
+  display: flex; /* TD6*/
+  flex-wrap: wrap; /* TD6*/
+  gap: 0.75rem;/* TD6*/
+  margin-top: 0.75; /* TD6*/
+}
+
+.product-grid .item{
+  flex-grow: 1;  /* TD6*/
+  flex-shrink: 1;   /* TD6*/
+  min-width: 140px; /* TD6*/
+  min-height: 90px; /* TD6*/
+
+  background-color: var(--card);  /* TD6*/
+  border-radius: 0.75rem; /* TD6*/
+
+  display: flex;  /* TD6*/
+  align-items: center; /* TD6*/
+  justify-content: center; /* TD6*/
+  font-weight: 700; /* TD6*/
+}
 .position-stage {
   position: relative;
   padding: 2rem;
   min-height: 260px;
   border: 1px solid rgba(0, 0, 0, 0.08);
   overflow: hidden;
+}
+
+.static-box {
+  padding: 0.5rem 0.75rem; /* TD7*/
+  border-radius: 10px; /* TD7*/
+  background-color: rgba(0, 0, 0, 0.05); /* TD7*/
+  margin-bottom: 0.5rem; /* TD7*/
 }
 
 .card {
